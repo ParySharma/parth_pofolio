@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+/* .LightBG {
+  background-image: url('../../public/assets/darkmod.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+} */
+body{
+  background-image: url('../../public/assets/darkmod.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  text-align: -webkit-center;
+  background-attachment: fixed;
+
+}
+.container{
+  width: 1400px !important;
+  text-align: left;
+}
+.tabsss>div> .MuiTabs-indicator{
+  display: none;
+}
+.RightTabs{
+  height: 100px;
+  border-radius: 18;
+}
+.RightTabs.Mui-selected{
+  background-color: #1976d217;
+}
