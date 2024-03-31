@@ -1,19 +1,23 @@
-'use client'
 import React from 'react'
 import CardStyled from '../components/Card'
 import { Box, Grid, Tab, Tabs, Typography } from '@mui/material'
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
-// import RecentActorsOutlinedIcon from '@mui/icons-material/RecentActorsOutlined';
 import ContactsOutlinedIcon from '@mui/icons-material/ContactsOutlined';
 import InterestsOutlinedIcon from '@mui/icons-material/InterestsOutlined';
 import BadgeOutlinedIcon from '@mui/icons-material/BadgeOutlined';
+import LeftContent from './contents/LeftContent';
+
+interface Props {
+    darkMode: boolean;
+}
 
 interface TabPanelProps {
     children?: React.ReactNode;
     index: number;
     value: number;
 }
+
 function TabPanel(props: TabPanelProps) {
     const { children, value, index, ...other } = props;
 
@@ -33,6 +37,7 @@ function TabPanel(props: TabPanelProps) {
         </div>
     );
 }
+
 function a11yProps(index: number) {
     return {
         id: `vertical-tab-${index}`,
@@ -40,22 +45,23 @@ function a11yProps(index: number) {
     };
 }
 
-const HomePage = () => {
+const HomePage: React.FC<Props> = ({ darkMode }) => {
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
     };
+
     return (
         <div>
-            <Grid container style={{ gap: '55px' }} >
+            <Grid container style={{ gap: '55px' }}>
                 <Grid item xs={3}>
-                    <CardStyled>
-                        sad
+                    <CardStyled darkMode={darkMode}>
+                        <LeftContent darkMode={darkMode} />
                     </CardStyled>
                 </Grid>
                 <Grid item xs={7}>
-                    <CardStyled>
+                    <CardStyled darkMode={darkMode}>
                         <Box>
                             <TabPanel value={value} index={0}>
                                 Item One
@@ -76,8 +82,9 @@ const HomePage = () => {
                     </CardStyled>
                 </Grid>
                 <Grid item xs={1}>
-                    <CardStyled padding={10}>
-                        <Tabs className='tabsss'
+                    <CardStyled darkMode={darkMode} padding={10}>
+                        <Tabs
+                            className='tabsss'
                             orientation="vertical"
                             value={value}
                             onChange={handleChange}
@@ -95,4 +102,4 @@ const HomePage = () => {
     )
 }
 
-export default HomePage
+export default HomePage;

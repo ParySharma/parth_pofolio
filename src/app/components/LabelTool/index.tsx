@@ -6,22 +6,22 @@ import { Card } from "@mui/material";
 // Styled Card component
 const CardWrapper = styled(Card)`
   &&.MuiCard-root {
-    height: ${({ height }: any) => height || '100'}%;
-    width: ${({ width }: any ) => width}%;
-    margin-bottom: ${({ mb }: any) => mb || 24}px;
-    background-color: ${({ darkMode, backgroundColor }: any) => darkMode ? '#333' : backgroundColor || '#fff'}; // Change background color based on darkMode
+    height: ${({ height }: any) => height || '100%'};
+    width: ${({ width }: any) => width}%;
+    margin-bottom: ${({ mb }: any) => mb || 19}px;
+    background-color: ${({ darkMode, backgroundColor }: any) => darkMode ? '#255585b0' : backgroundColor || '#d219bb17'};
     border-color: ${({ borderColor }: any) => borderColor || 'none'};
-    color: ${({ darkMode, textColor }: any) => darkMode ? '#fff' : textColor || '#111827'}; // Change text color based on darkMode
+    color: ${({ darkMode, textColor }: any) => darkMode ? '#fff' : textColor || 'Black'};
     border-radius: ${({ radius }: any) => radius || 12}px;
     font-size: ${({ fontSize }: any) => fontSize || 18}px;
     margin-top: ${({ marginTop }: any) => marginTop || 0}px;
     margin-left: ${({ ml }: any) => ml || 0}px;
-    box-shadow: ${({ boxShadow, darkMode }: any)=> boxShadow || (darkMode ? '0 4px 4px 0 #00000014' : 'none')}; // Change box-shadow based on darkMode
-    padding: ${({ padding }: any) => padding || 24}px;
+    box-shadow: ${({ boxShadow, darkMode }: any) => boxShadow || (darkMode ? '0 4px 4px 0 #00000014' : '0 4px 4px 0 #00000014')};
+    padding: ${({ padding }: any) => padding || 8}px;
   }
 `;
 
-const CardStyled = ({
+const LabelTool = ({
     className,
     height,
     text,
@@ -71,4 +71,4 @@ const CardStyled = ({
     );
 };
 
-export default CardStyled;
+export default LabelTool;

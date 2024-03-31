@@ -11,13 +11,16 @@
   background-size: 100% 100%;
 } */
 body{
-  background-image: url('../../public/assets/darkmod.jpg');
+  background-image: url('../../public/assets/lightmog.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   height: auto;
   text-align: -webkit-center;
   background-attachment: fixed;
- 
+}
+body.DarkMode{
+  background-image: url('../../public/assets/darkmod.jpg') !important;
+
 }
 .container{
   width: 1400px !important;
@@ -28,8 +31,15 @@ body{
 }
 .RightTabs{
   height: 100px;
-  border-radius: 18;
+  border-radius: 18px !important;
 }
 .RightTabs.Mui-selected{
   background-color: #1976d217;
+  color: #1976d2 !important;
+}
+.whiteText{
+  color: #fff !important;
+}
+.darkText{
+  color: black !important;
 }
