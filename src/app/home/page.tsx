@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import CardStyled from '../components/Card';
 import { Box, Grid, Tab, Tabs, Typography } from '@mui/material';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
@@ -44,23 +44,93 @@ function a11yProps(index: number) {
 
 const HomePage = ({ darkMode }: any) => {
   const [value, setValue] = useState(0);
+  const [mobile, setMobile] = useState(false);
 
+  useEffect(() => {
+    const mobile = window.innerWidth < 900;
+    setMobile(mobile);
+    window.addEventListener('resize', () => {
+      setMobile(window.innerWidth < 900);
+    });
+  }, []);
   const handleChange = (event: any, newValue: number) => {
     setValue(newValue);
   };
-
+  const TabView = ({ tabtype }: any) => {
+    return (
+      <CardStyled
+        darkMode={darkMode}
+        overflow='auto'
+        height={mobile ? 'auto' : ''}
+        mb={mobile ? 2 : ''}
+      >
+        <Tabs
+          className='tabsss'
+          orientation={tabtype}
+          value={value}
+          onChange={handleChange}
+        >
+          <Tab
+            className='RightTabs'
+            sx={{ padding: '0px' }}
+            icon={<PersonOutlineOutlinedIcon />}
+            label='About'
+            {...a11yProps(0)}
+          />
+          <Tab
+            className='RightTabs'
+            sx={{ padding: '0px' }}
+            icon={<DescriptionOutlinedIcon />}
+            label='Resume'
+            {...a11yProps(1)}
+          />
+          <Tab
+            className='RightTabs'
+            sx={{ padding: '0px' }}
+            icon={<BadgeOutlinedIcon />}
+            label='Work Ex.'
+            {...a11yProps(2)}
+          />
+          <Tab
+            className='RightTabs'
+            sx={{ padding: '0px' }}
+            icon={<ContactsOutlinedIcon />}
+            label='Contact'
+            {...a11yProps(3)}
+          />
+          <Tab
+            className='RightTabs'
+            sx={{ padding: '0px' }}
+            icon={<InterestsOutlinedIcon />}
+            label='Handels'
+            {...a11yProps(4)}
+          />
+        </Tabs>
+      </CardStyled>
+    );
+  };
   return (
     <div>
       <Grid
         container
-        style={{ gap: '24px', width: 'auto', marginLeft: '25px' }}
+        columns={{ xs: 4, sm: 8, md: 12 }}
+        spacing={2}
+        marginBottom={10}
       >
-        <Grid item xs={3}>
-          <CardStyled darkMode={darkMode}>
+        <Grid item xs={12} sm={12} md={0.2}></Grid>
+        <Grid item xs={12} sm={12} md={3}>
+          <CardStyled darkMode={darkMode} height={mobile ? 'auto' : ''}>
             <LeftContent darkMode={darkMode} />
           </CardStyled>
         </Grid>
-        <Grid item xs={7}>
+        {mobile ? (
+          <Grid item xs={4} sm={12} md={1}>
+            <TabView tabtype='horizontal' />
+          </Grid>
+        ) : (
+          ''
+        )}
+        <Grid item xs={12} sm={12} md={7}>
           <CardStyled darkMode={darkMode}>
             <Box>
               <TabPanel value={value} index={0}>
@@ -81,52 +151,13 @@ const HomePage = ({ darkMode }: any) => {
             </Box>
           </CardStyled>
         </Grid>
-        <Grid item xs={1}>
-          <CardStyled darkMode={darkMode} padding={10}>
-            <Tabs
-              className='tabsss'
-              orientation='vertical'
-              value={value}
-              onChange={handleChange}
-            >
-              <Tab
-                className='RightTabs'
-                sx={{ padding: '0px' }}
-                icon={<PersonOutlineOutlinedIcon />}
-                label='About'
-                {...a11yProps(0)}
-              />
-              <Tab
-                className='RightTabs'
-                sx={{ padding: '0px' }}
-                icon={<DescriptionOutlinedIcon />}
-                label='Resume'
-                {...a11yProps(1)}
-              />
-              <Tab
-                className='RightTabs'
-                sx={{ padding: '0px' }}
-                icon={<BadgeOutlinedIcon />}
-                label='Work Ex.'
-                {...a11yProps(2)}
-              />
-              <Tab
-                className='RightTabs'
-                sx={{ padding: '0px' }}
-                icon={<ContactsOutlinedIcon />}
-                label='Contact'
-                {...a11yProps(3)}
-              />
-              <Tab
-                className='RightTabs'
-                sx={{ padding: '0px' }}
-                icon={<InterestsOutlinedIcon />}
-                label='Handels'
-                {...a11yProps(4)}
-              />
-            </Tabs>
-          </CardStyled>
-        </Grid>
+        {!mobile ? (
+          <Grid item xs={12} sm={12} md={1.5}>
+            <TabView tabtype='vertical' />
+          </Grid>
+        ) : (
+          ''
+        )}
       </Grid>
     </div>
   );

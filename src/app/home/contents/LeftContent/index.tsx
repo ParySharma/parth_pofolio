@@ -11,8 +11,7 @@ import Image from 'next/image';
 interface Props {
   darkMode: any;
 }
-const Item = styled(Paper)(({ theme }) => ({
-}));
+const Item = styled(Paper)(({ theme }) => ({}));
 const LeftContent: React.FC<Props> = ({ darkMode }) => {
   return (
     <div style={{ textAlign: 'center' }}>
@@ -25,29 +24,79 @@ const LeftContent: React.FC<Props> = ({ darkMode }) => {
           borderRadius: '18px 50% 50% 50%',
           marginLeft: '-4px',
           height: '300px',
-          color: darkMode ? 'white' : 'black',
+          color: darkMode ? '#fff' : 'black',
         }}
       >
-        <Image src="/assets/profilePiture.png" width='300' height='300'  style={{ borderRadius: '18px 50% 50% 50%' }} alt="" />
+        <Image
+          src='/assets/profilePiture.png'
+          width='300'
+          height='300'
+          style={{ borderRadius: '18px 50% 50% 50%' }}
+          alt=''
+        />
       </Card>
 
-      <Box sx={{ height: '140px', backgroundColor: darkMode ? '#333' : '#fff' }}></Box>
-      <Box sx={{ textAlign: '-webkit-center' }} >
-        <Typography sx={{ fontSize: '30px', fontWeight: '600' }}>Parth Sharma</Typography>
-        <LabelTool width={50} darkMode={darkMode} >
-          <Typography sx={{ fontSize: '16px', fontWeight: '500' }}>
+      <Box
+        sx={{ height: '140px', backgroundColor: darkMode ? '#333' : '#fff' }}
+      ></Box>
+      <Box sx={{ textAlign: '-webkit-center' }}>
+        <Typography sx={{ fontSize: '30px', fontWeight: '600' }}>
+          Parth Sharma
+        </Typography>
+        <LabelTool width={50} darkMode={darkMode}>
+          <Typography
+            sx={{
+              fontSize: '16px',
+              fontWeight: '600',
+              letterSpacing: '2.5px',
+              color: darkMode ? '#fff' : '#000',
+            }}
+          >
             Front-End Dev.
           </Typography>
         </LabelTool>
         <Stack
-          direction="row"
+          direction='row'
           justifyContent='center'
-          divider={<Divider orientation="vertical" flexItem />}
-          spacing={2}>
-          <Item sx={{height:'30px', backgroundColor: darkMode ? '#1976d2' : '#fff', borderRadius:'10px'}}><FacebookIcon sx={{fontSize:'30px'}} /></Item>
-          <Item sx={{height:'30px', backgroundColor: darkMode ? '#1976d2' : '#fff', borderRadius:'10px'}}><InstagramIcon sx={{fontSize:'30px'}} /> </Item>
-          <Item sx={{height:'30px', backgroundColor: darkMode ? '#1976d2' : '#fff', borderRadius:'10px'}}><GitHubIcon sx={{fontSize:'30px'}} /> </Item>
-          <Item sx={{height:'30px', backgroundColor: darkMode ? '#1976d2' : '#fff', borderRadius:'10px'}}><LinkedInIcon sx={{fontSize:'30px'}} /> </Item>
+          divider={<Divider orientation='vertical' flexItem />}
+          spacing={2}
+        >
+          <Item
+            sx={{
+              height: '30px',
+              backgroundColor: darkMode ? '#1976d2' : '#fff',
+              borderRadius: '10px',
+            }}
+          >
+            <FacebookIcon sx={{ fontSize: '30px' }} />
+          </Item>
+          <Item
+            sx={{
+              height: '30px',
+              backgroundColor: darkMode ? '#1976d2' : '#fff',
+              borderRadius: '10px',
+            }}
+          >
+            <InstagramIcon sx={{ fontSize: '30px' }} />{' '}
+          </Item>
+          <Item
+            sx={{
+              height: '30px',
+              backgroundColor: darkMode ? '#1976d2' : '#fff',
+              borderRadius: '10px',
+            }}
+          >
+            <GitHubIcon sx={{ fontSize: '30px' }} />{' '}
+          </Item>
+          <Item
+            sx={{
+              height: '30px',
+              backgroundColor: darkMode ? '#1976d2' : '#fff',
+              borderRadius: '10px',
+            }}
+          >
+            <LinkedInIcon sx={{ fontSize: '30px' }} />{' '}
+          </Item>
         </Stack>
       </Box>
     </div>
