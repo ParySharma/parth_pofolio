@@ -3,6 +3,28 @@ import styled from "styled-components";
 import CircularProgress from "@mui/material/CircularProgress";
 import { Card } from "@mui/material";
 
+
+interface LabelToolProps {
+    className?: string;
+    height?: string; // Adjust type as per requirement
+    text?: React.ReactNode;
+    width?: number;
+    marginLeft?: number;
+    backgroundColor?: string;
+    borderColor?: string;
+    textColor?: string;
+    radius?: number;
+    loading?: boolean;
+    startIcon?: React.ReactNode;
+    fontSize?: number;
+    marginTop?: number;
+    mb?: number;
+    ml?: number;
+    padding?: number;
+    darkMode?: boolean;
+    children?: React.ReactNode;
+  }
+
 // Styled Card component
 const CardWrapper = styled(Card)`
   &&.MuiCard-root {
@@ -21,7 +43,8 @@ const CardWrapper = styled(Card)`
   }
 `;
 
-const LabelTool = ({
+  
+  const LabelTool: React.FC<LabelToolProps> = ({
     className,
     height,
     text,
@@ -39,36 +62,24 @@ const LabelTool = ({
     ml,
     padding,
     children,
-    darkMode // Added darkMode prop
-}: any) => {
+    darkMode
+  }) => {
     return (
-        <CardWrapper
-            className={className}
-            height={height}
-            width={width}
-            marginLeft={marginLeft}
-            backgroundColor={backgroundColor}
-            borderColor={borderColor}
-            textColor={textColor}
-            radius={radius}
-            fontSize={fontSize}
-            marginTop={marginTop}
-            ml={ml}
-            padding={padding}
-            mb={mb}
-            darkMode={darkMode} // Passed darkMode prop to styled component
-        >
-            {loading ? (
-                <CircularProgress size={20} color="inherit" />
-            ) : (
-                <>
-                    {startIcon && startIcon}
-                    {text}
-                    {children} {/* Render additional children */}
-                </>
-            )}
-        </CardWrapper>
+      <CardWrapper
+        className={className}
+        
+      >
+        {loading ? (
+          <CircularProgress size={20} color="inherit" />
+        ) : (
+          <>
+            {startIcon && startIcon}
+            {text}
+            {children}
+          </>
+        )}
+      </CardWrapper>
     );
-};
+  };
 
 export default LabelTool;

@@ -6,9 +6,10 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import Image from 'next/image';
 
 interface Props {
-  darkMode: boolean;
+  darkMode: any;
 }
 const Item = styled(Paper)(({ theme }) => ({
 }));
@@ -27,7 +28,7 @@ const LeftContent: React.FC<Props> = ({ darkMode }) => {
           color: darkMode ? 'white' : 'black',
         }}
       >
-        <img src="./assets/profilePiture.png" width='300px' style={{ borderRadius: '18px 50% 50% 50%' }} alt="" />
+        <Image src="/assets/profilePiture.png" width='300' height='300'  style={{ borderRadius: '18px 50% 50% 50%' }} alt="" />
       </Card>
 
       <Box sx={{ height: '140px', backgroundColor: darkMode ? '#333' : '#fff' }}></Box>

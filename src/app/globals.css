@@ -23,7 +23,7 @@ body.DarkMode{
 
 }
 .container{
-  width: 1400px !important;
+  /* width: 1400px !important; */
   text-align: left;
 }
 .tabsss>div> .MuiTabs-indicator{

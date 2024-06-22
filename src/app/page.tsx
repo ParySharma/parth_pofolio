@@ -11,8 +11,9 @@ const Mainpage = () => {
   const changeMode = () => {
     setDarkMode(!darkMode);
   };
-  const rightTabs = document.getElementsByClassName('RightTabs');
+
   useEffect(() => {
+    const rightTabs = document.getElementsByClassName('RightTabs');
     if (darkMode) {
       document.body.classList.add('DarkMode');
       for (let i = 0; i < rightTabs.length; i++) {
@@ -29,7 +30,7 @@ const Mainpage = () => {
   return (
     <div className="container">
       <div style={{ height: '250px' }}>
-        <Button onClick={changeMode} sx={{ right: '33px', float: 'right', top: '65%;' }}>
+        <Button onClick={changeMode} sx={{ right: '80px', float: 'right', top: '65%;' }}>
           {darkMode ? <WbSunnyIcon  sx={{ fontSize: 40, color: 'gold'  }} /> : <NightlightRoundIcon sx={{ fontSize: 40, color:'black' }} />}
         </Button>
       </div>
