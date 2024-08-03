@@ -8,6 +8,11 @@ import ContactsOutlinedIcon from '@mui/icons-material/ContactsOutlined';
 import InterestsOutlinedIcon from '@mui/icons-material/InterestsOutlined';
 import BadgeOutlinedIcon from '@mui/icons-material/BadgeOutlined';
 import LeftContent from './contents/LeftContent';
+import AboutTab from './Tabs/AboutTab';
+import ResumeTab from './Tabs/ResumeTab';
+import WorkExpTab from './Tabs/WorkExpTab';
+import ContactTab from './Tabs/ContactTab';
+import HandelsTab from './Tabs/HandelsTab';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -109,6 +114,7 @@ const HomePage = ({ darkMode }: any) => {
       </CardStyled>
     );
   };
+
   return (
     <div>
       <Grid
@@ -134,19 +140,19 @@ const HomePage = ({ darkMode }: any) => {
           <CardStyled darkMode={darkMode}>
             <Box>
               <TabPanel value={value} index={0}>
-                Item One
+                <AboutTab />
               </TabPanel>
               <TabPanel value={value} index={1}>
-                Item Two
+                <ResumeTab />
               </TabPanel>
               <TabPanel value={value} index={2}>
-                Item Three
+                <WorkExpTab />
               </TabPanel>
               <TabPanel value={value} index={3}>
-                Item Four
+                <ContactTab />
               </TabPanel>
               <TabPanel value={value} index={4}>
-                Item Five
+                <HandelsTab />
               </TabPanel>
             </Box>
           </CardStyled>

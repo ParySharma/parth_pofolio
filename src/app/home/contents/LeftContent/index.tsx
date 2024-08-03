@@ -1,6 +1,7 @@
+'use client';
 import LabelTool from '@/app/components/LabelTool';
 import { Box, Card, Divider, Paper, Stack, Typography } from '@mui/material';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -11,6 +12,7 @@ import Image from 'next/image';
 interface Props {
   darkMode: any;
 }
+
 const Item = styled(Paper)(({ theme }) => ({}));
 const LeftContent: React.FC<Props> = ({ darkMode }) => {
   return (
