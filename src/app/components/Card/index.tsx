@@ -15,6 +15,7 @@ interface CardProps {
   overflow?: string;
   radius?: number;
   fontSize?: number;
+  minheight?: string;
   marginTop?: number;
   ml?: number;
   boxShadow?: any;
@@ -31,6 +32,7 @@ const CardWrapper = styled(Card)<CardProps>`
   &&.MuiCard-root {
     height: ${({ height }) => height || '100%'};
     width: ${({ width }) => width}%;
+    min-height: ${({ minheight }) => minheight || 'auto'};
     margin-bottom: ${({ mb }) => mb || 24}px;
     background-color: ${({ darkMode, backgroundColor }) =>
       darkMode
@@ -72,6 +74,7 @@ const CardStyled: React.FC<CardProps> = ({
   marginTop,
   mb,
   ml,
+  minheight,
   padding,
   children,
   darkMode, // Added darkMode prop
@@ -86,6 +89,7 @@ const CardStyled: React.FC<CardProps> = ({
       borderColor={borderColor}
       textColor={textColor}
       radius={radius}
+      minheight={minheight}
       overflow={overflow}
       fontSize={fontSize}
       marginTop={marginTop}
