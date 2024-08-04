@@ -1,4 +1,5 @@
 # My Resume Portfolio 🎨
+**Link** : https://parysharma.netlify.app/ 
 
 Welcome to my Resume Portfolio! This project is a personal showcase of my professional journey, skills, and accomplishments. Crafted with care and precision, it is built using **Next.js** and **Material-UI (MUI)**, taking inspiration from the sleek design of Bostami. Here's an overview of what this project entails:
 
