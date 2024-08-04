@@ -27,7 +27,7 @@ const index = ({ data, resumeButton }: any) => {
               variant='contained'
               color='primary'
               download={true}
-              href='/assets/profilePiture.jpg'
+              href='/assets/parth_Sharma_Resume.pdf'
               style={{
                 borderRadius: '8px',
               }}
