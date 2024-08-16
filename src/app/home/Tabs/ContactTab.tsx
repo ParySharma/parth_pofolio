@@ -49,8 +49,14 @@ const ContactTab = ({ title }: any) => {
             {` Feel free to contact me for any project or collaboration.`}
           </Typography>
           <Form onSubmit={formik.handleSubmit}>
-            <Grid container spacing={2} mb={2} mt={3}>
-              <Grid item xs={8}>
+            <Grid
+              container
+              spacing={2}
+              mb={2}
+              mt={3}
+              columns={{ xs: 4, sm: 8, md: 12 }}
+            >
+              <Grid item xs={9}>
                 <TextField
                   id='outlined-basic'
                   variant='outlined'
@@ -62,7 +68,7 @@ const ContactTab = ({ title }: any) => {
                   placeholder='First Name'
                 />
               </Grid>
-              <Grid item xs={8}>
+              <Grid item xs={9}>
                 <TextField
                   id='outlined-basic'
                   variant='outlined'
@@ -74,7 +80,7 @@ const ContactTab = ({ title }: any) => {
                   placeholder='Last Name'
                 />
               </Grid>
-              <Grid item xs={8}>
+              <Grid item xs={9}>
                 <TextField
                   id='outlined-basic'
                   variant='outlined'
@@ -86,14 +92,17 @@ const ContactTab = ({ title }: any) => {
                   placeholder='Email'
                 />
               </Grid>
-              <Grid item xs={12}>
+              <Grid item md={10}>
                 <TextareaAutosize
                   name='message'
                   value={formik.values.message}
                   onChange={formik.handleChange}
+                  minRows={8}
                   style={{
                     width: '100%',
-                    height: '40px',
+                    maxWidth: '100%',
+                    minWidth: '10%',
+                    minHeight: '10px',
                     padding: '12px',
                     fontSize: '16px',
                     borderRadius: '8px',

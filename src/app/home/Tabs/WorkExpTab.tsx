@@ -18,7 +18,7 @@ const WorkExpTab = ({ title }: any) => {
   return (
     <div>
       <Header data={title} />
-      <Grid container spacing={2}>
+      <Grid container spacing={2} columns={{ xs: 1, sm: 8, md: 12 }}>
         {_map(WorkExpMockData, (data: any) => {
           return (
             <Grid item xs={12}>
@@ -71,7 +71,7 @@ const WorkExpTab = ({ title }: any) => {
                   color: 'black',
                 }}
               >
-                <Grid container spacing={2}>
+                <Grid container spacing={2} columns={{ xs: 1, sm: 8, md: 12 }}>
                   <Grid item xs={7}>
                     <Typography fontWeight={600} mt={1}>
                       Project Name:- {data?.title}

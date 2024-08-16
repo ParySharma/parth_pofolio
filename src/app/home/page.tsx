@@ -60,7 +60,6 @@ const HomePage = ({ darkMode }: any) => {
 
   const handleChange = (event: any, newValue: number) => {
     setValue(newValue);
-    console.log('value', value);
   };
 
   const renderTabContent = (index: number) => {
@@ -163,7 +162,7 @@ const HomePage = ({ darkMode }: any) => {
           >
             <Box>
               <TabPanel value={value} index={value}>
-                <Box padding={4}>{renderTabContent(value)}</Box>
+                <Box>{renderTabContent(value)}</Box>
               </TabPanel>
             </Box>
           </CardStyled>

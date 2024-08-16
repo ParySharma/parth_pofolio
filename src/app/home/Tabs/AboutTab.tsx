@@ -8,7 +8,7 @@ import AutoFixHighSharpIcon from '@mui/icons-material/AutoFixHighSharp';
 const StyledBox: any = styled(Box)`
   border-radius: 10px;
   padding: 16px;
-  min-height: 150px;
+  min-height: 200px;
   color: white;
 
   &:hover {
@@ -44,10 +44,10 @@ const AboutTab = ({ title }: any) => {
         </Typography>
       </div>
       <div>
-        <Grid container spacing={3} mt={1}>
+        <Grid container spacing={3} mt={1} columns={{ xs: 1, sm: 6, md: 12 }}>
           <Grid item xs={6}>
             <StyledBox sx={{ backgroundColor: 'lightgreen' }}>
-              <Grid container>
+              <Grid container columns={{ xs: 4, sm: 8, md: 12 }}>
                 <Grid item xs={3}>
                   <ImportantDevicesSharpIcon sx={{ fontSize: 70 }} />
                 </Grid>
@@ -67,7 +67,7 @@ const AboutTab = ({ title }: any) => {
           </Grid>
           <Grid item xs={6}>
             <StyledBox sx={{ backgroundColor: 'pink' }}>
-              <Grid container>
+              <Grid container columns={{ xs: 4, sm: 8, md: 12 }}>
                 <Grid item xs={3}>
                   <AutoFixHighSharpIcon sx={{ fontSize: 70 }} />
                 </Grid>

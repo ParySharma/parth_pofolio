@@ -27,7 +27,7 @@ const ResumeTab = ({ title, resumeButton }: any) => {
   return (
     <>
       <Headers data={title} resumeButton={resumeButton} />
-      <Grid container spacing={3}>
+      <Grid container spacing={3} columns={{ xs: 4, sm: 8, md: 12 }}>
         <Grid item xs={6}>
           <Typography
             variant='h4'

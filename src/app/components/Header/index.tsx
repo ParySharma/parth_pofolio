@@ -6,7 +6,13 @@ import React from 'react';
 const index = ({ data, resumeButton }: any) => {
   return (
     <div>
-      <Grid container alignItems='center' spacing={5} mb={3}>
+      <Grid
+        container
+        alignItems='center'
+        spacing={5}
+        mb={3}
+        columns={{ xs: 4, sm: 8, md: 12 }}
+      >
         <Grid item>
           <Typography variant='h3' fontWeight={600}>
             {data}
