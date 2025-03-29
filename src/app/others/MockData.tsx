@@ -116,8 +116,8 @@ export const PersonalData = [
   },
   {
     id: 4,
-    title: 'Birth',
-    description: 'Oct 01, 1999',
+    title: 'Years of Experience',
+    description: '2+ years',
     icon: (
       <TodayIcon
         sx={{
