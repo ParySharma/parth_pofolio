@@ -4,6 +4,7 @@ import ContactMailIcon from '@mui/icons-material/ContactMail';
 import PersonPinIcon from '@mui/icons-material/PersonPin';
 import TodayIcon from '@mui/icons-material/Today';
 import { ZomoHealthLogo } from '../components/Images/projectsLogo/zomoHealth';
+import { Height } from '@mui/icons-material';
 
 export const EducationData = [
   {
@@ -36,14 +37,13 @@ export const EducationData = [
 export const WorkExpData = [
   {
     id: 1,
-    title: 'Frontend Developer',
+    title: 'ReactJs Developer',
     date: '2023 - Present',
     location: 'Surat, India',
     bgColor: '#f1a8a8',
     description:
       'I am currently working as a Frontend Developer at Atologist Infotech.',
   },
-
   {
     id: 2,
     title: 'Computer Teacher',
@@ -52,6 +52,16 @@ export const WorkExpData = [
     bgColor: '#a8f1a8',
     description:
       'I have worked as a Computer Teacher at Shree Saraswati School.',
+  },
+
+  {
+    id: 3,
+    title: 'Sales Executive',
+    date: '2020 - 2022',
+    location: 'Surat, India',
+    bgColor: '#a8bdf1',
+    description:
+      'Worked as a Sales Executive at Zota Health Care (Dava India).',
   },
 ];
 
@@ -218,15 +228,47 @@ export const SkillsData = [
 export const WorkExpMockData = [
   {
     id: 1,
-    title: 'Zomo Health',
-    role: 'Frontend Developer',
-    logo: 'https://zomo-frontend.s3.amazonaws.com/feimg/auth/logo.svg',
+    title: 'Atologist Infotech',
+    role: 'ReactJs Developer',
+    logo: '/assets/atologist-infotech.png',
     link: 'https://zomohealth.com/',
-    bigLogoSvg: <ZomoHealthLogo />,
-    date: '2023 - Present',
+    height: 80,
+    width: 250,
+    bigLogoSvg: '',
+    date: '02/2023 - Present',
     location: 'Surat, India',
     bgColor: '#f1a8a8',
     description:
-      'To create healthier and happier people through innovative environments and technology that engage individuals in exciting pathways towards their health goals. The platform is built using ReactJS and Redux for state management. The application is built with a mobile-first approach and is responsive on all devices.',
+      'At Atologist Infotech, I developed responsive and interactive web applications using React.js, Next.js, HTML, CSS, and JavaScript. I collaborated with back-end teams to integrate APIs, resolved cross-browser compatibility issues, and built reusable UI components for scalability. My work focused on optimizing performance, ensuring seamless user experiences, and integrating third-party APIs into web solutions',
+  },
+  {
+    id: 2,
+    title: 'Shri Sharaswati School',
+    role: 'Computer Teacher',
+    logo: '/assets/zomoHealthLogo.png',
+    link: 'https://www.zotahealthcare.com/',
+    height: 120,
+    width: 280,
+    bigLogoSvg: '',
+    date: '2022 - 2023',
+    location: 'Surat, India',
+    bgColor: '#f1a8a8',
+    description: `As a Computer Teacher at Shri Sharaswati School, I taught students from 5th to 12th standard, covering essential topics such as programming fundamentals, Microsoft Office, HTML, and basic computer operations. I focused on making technical concepts engaging and practical, ensuring students gained hands-on experience.
+
+      Beyond computer education, I also had the opportunity to teach Social Science, English, and Science to students up to 8th standard, helping them develop a strong foundation in these subjects. By incorporating interactive learning methods, I aimed to make lessons more understandable and enjoyable for students`,
+  },
+  {
+    id: 3,
+    title: 'Zota Health Care (Dava India)',
+    role: 'Sales Executive',
+    logo: '/assets/jmpct-logo.png',
+    link: 'https://jmpct.org/',
+    Height: 100,
+    width: 100,
+    bigLogoSvg: '',
+    date: '2020 - 2022',
+    location: 'Surat, India',
+    bgColor: '#f1a8a8',
+    description: `As a Sales & Dispatch Manager, I managed the end-to-end order processing—from taking orders and generating bills to dispatching medicines and ensuring timely payment collection. I coordinated with suppliers, streamlined logistics, and maintained accurate records to ensure smooth operations and customer satisfaction. My role required attention to detail, strong communication, and efficient multitasking to handle daily sales and dispatch activities seamlessly`,
   },
 ];

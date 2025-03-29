@@ -18,10 +18,16 @@ const WorkExpTab = ({ title }: any) => {
   return (
     <div>
       <Header data={title} />
-      <Grid container spacing={2} columns={{ xs: 1, sm: 8, md: 12 }}>
+      <Grid
+        container
+        spacing={2}
+        columns={{ xs: 1, sm: 8, md: 12 }}
+        maxHeight={'630px'}
+        overflow={'auto'}
+      >
         {_map(WorkExpMockData, (data: any) => {
           return (
-            <Grid item xs={12}>
+            <Grid item xs={12} key={data?.id}>
               {/* <Accordion sx={{ minHeight: '50px', backgroundColor: '#f3f6f6' }}>
                 <AccordionSummary
                   expandIcon={<ArrowDownwardIcon />}
@@ -81,8 +87,26 @@ const WorkExpTab = ({ title }: any) => {
                     </Typography>
                     {/* <Typography fontWeight={600}>Duration: 3 months</Typography> */}
                   </Grid>
-                  <Grid item xs={5}>
-                    {data?.bigLogoSvg}
+                  <Grid item xs={5} textAlign={'right'}>
+                    {data?.bigLogoSvg ? (
+                      data?.bigLogoSvg
+                    ) : (
+                      <Image
+                        src={data?.logo}
+                        alt='logo'
+                        width={100}
+                        height={10}
+                        style={{
+                          borderRadius: '8px',
+                          height: data?.height || '100%',
+                          width: data?.width || '100%',
+                          // maxHeight: '100px',
+                          // maxWidth: '100px',
+                          // objectFit: 'cover',
+                        }}
+                        unoptimized
+                      />
+                    )}
                   </Grid>
                 </Grid>
                 <Typography fontWeight={600} mt={1}>
