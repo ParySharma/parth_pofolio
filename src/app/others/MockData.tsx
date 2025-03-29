@@ -243,7 +243,7 @@ export const WorkExpMockData = [
   },
   {
     id: 2,
-    title: 'Shri Sharaswati School',
+    title: 'Shri Saraswati School',
     role: 'Computer Teacher',
     logo: '/assets/jmpct-logo.png',
     link: 'https://www.zotahealthcare.com/',
