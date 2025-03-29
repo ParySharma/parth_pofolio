@@ -245,7 +245,7 @@ export const WorkExpMockData = [
     id: 2,
     title: 'Shri Sharaswati School',
     role: 'Computer Teacher',
-    logo: '/assets/zomoHealthLogo.png',
+    logo: '/assets/jmpct-logo.png',
     link: 'https://www.zotahealthcare.com/',
     height: 120,
     width: 280,
@@ -261,7 +261,8 @@ export const WorkExpMockData = [
     id: 3,
     title: 'Zota Health Care (Dava India)',
     role: 'Sales Executive',
-    logo: '/assets/jmpct-logo.png',
+    logo: '/assets/zomoHealthLogo.png',
+
     link: 'https://jmpct.org/',
     Height: 100,
     width: 100,
